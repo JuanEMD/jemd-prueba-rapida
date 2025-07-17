@@ -1,69 +1,38 @@
-# React + TypeScript + Vite
+# Formulario de Registro - React + TypeScript + Unit Testing
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Explicación Funcional
 
-Currently, two official plugins are available:
+Este proyecto muestra un formulario de registro de usuarios con validación de datos en tiempo real. El formulario recopila información básica, como nombre, email, contraseña y confirmación de la misma, y muestra mensajes de validación para guiar al usuario.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Cuando se completa correctamente el formulario y se envía, se muestra una notificación de éxito y otra notificación con los datos ingresados por el usuario en formato JSON.
 
-## Expanding the ESLint configuration
+La interfaz es sencilla pero profesional, con un estilo limpio y retroalimentación visual inmediata sobre la validez de los datos ingresados.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Detalles Técnicos
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### Tecnologías Principales
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+- **React**: En esta ocación, elegí React por encima de Next porque el proyecto era sumamente sencillo y ligero y no se aprovecharían todas las características que provee Next.
+- **TypeScript**: Incluí TypeScript para garantizar un código más robusto, limpio y prevenir errores de tipado.
+- **Vite**: Utilicé este compilador por recomendación de Meta, los cuales ahora incluyen por defecto vite como compilador, además de su rápida velocidad de compilación.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### Librerías Utilizadas
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+- **Tailwind**: Utilicé este framework por recomendación, conformidad y por permitir un desarrollo ágil, rápido y dinámico por sus clases predefinidas y moldeables.
+- **React-toastify**: Utilicé esta librería de notificaciones por su fácil instalación, manejo y personalización.
+- **Yup y React Hook Form**: Utilicé estas librerías por la facilidad que ofrecen para manejar y validar los campos del formulario de manera clara gracias a la sintaxis declarativa de yup y a su fácil integración con react hook form, el cual posee una API bastante intuitiva y además evita renderizados innecesarios.
+- **userEvent, vitest**: Utilizados para la creación de test unitarios en cada componente, simulando la implementación con acciones que realizaría un usuario final.
+- **playwright**: Utilizado para ejecutar las pruebas unitarias en un navegador integraado.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Instalación y Configuración
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### Requisitos Previos
+- Node.js (versión 16.x o superior)
+- pnpm (recomendado) o npm
+![alt text](image.png)
+### Comandos de Instalación
+
+1. **Clonar el repositorio**:
+   ```bash
+   git clone https://github.com/tu-usuario/jemd-prueba-rapida.git
+   cd jemd-prueba-rapida

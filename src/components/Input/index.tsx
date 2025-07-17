@@ -4,12 +4,15 @@ import EyeOffOutlineIcon from "../../assets/icons/components/EyeOffOutlineIcon";
 import type { InputProps } from "../../libs/interfaces";
 
 const Input = ({
-  type = "text",
+  ariaLabel = "input",
+  type,
   name,
   classes,
   placeHolder,
-  register,
+  disabled = false,
   registerOptions = {},
+  register,
+  onChange,
 }: InputProps) => {
   const [showPassword, setShowPassword] = useState(false);
 
@@ -21,7 +24,25 @@ const Input = ({
 
   return (
     <div className="relative">
-      <input
+      {!register ? (
+        <input
+          aria-label={ariaLabel}
+
+          name="name"
+          disabled={disabled}
+          onChange={onChange}
+          type={
+            type === "password"
+              ? showPassword
+                ? "text"
+                : "password"
+              : type || "text"
+          }
+          className={inputClasses}
+          placeholder={placeHolder}
+        />
+      ) : (<input
+        aria-label={ariaLabel}
         type={
           type === "password"
             ? showPassword
@@ -32,7 +53,7 @@ const Input = ({
         className={inputClasses}
         placeholder={placeHolder}
         {...register(name, registerOptions)}
-      />
+      />)}
       {type === "password" && (
         <button
           type="button"

@@ -19,6 +19,7 @@ export interface IconComponentProps {
 }
 
 export interface ButtonProps {
+  ariaLabel?: string;
   children?: ReactNode;
   onClick?: () => void;
   disabled?: boolean;
@@ -28,16 +29,20 @@ export interface ButtonProps {
 }
 
 export interface InputProps {
+  ariaLabel?: string;
   type: string;
   name: "name" | "email" | "password" | "confirmPassword";
   classes?: string;
   placeHolder?: string;
   required?: boolean;
-  register: UseFormRegister<RegisterFormProps>;
+  disabled?: boolean;
+  register?: UseFormRegister<RegisterFormProps>;
   registerOptions?: Record<string, unknown>;
+  onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
 export interface ValidationErrorMessageProps {
+  ariaLabel?: string;
   message: string | undefined;
 }
 
@@ -75,4 +80,5 @@ export interface CustomUserDataToastProps {
   data: {
     userData: RegisterFormProps;
   };
+  ariaLabel?: string;
 }

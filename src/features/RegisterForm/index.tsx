@@ -47,6 +47,7 @@ const RegisterForm = ({ onSubmit }: SubmitRegisterForm) => {
 
   const submitHandler = (data: RegisterFormProps): void => {
     onSubmit(data);
+
     reset({
       name: "",
       email: "",
@@ -64,15 +65,16 @@ const RegisterForm = ({ onSubmit }: SubmitRegisterForm) => {
   return (
     <div className={containerClasses}>
       <h2 className={headerClasses}>Registro</h2>
-      <form className={formClasses} onSubmit={handleSubmit(submitHandler)}>
+      <form name="register-form" className={formClasses} onSubmit={handleSubmit(submitHandler)}>
         <div className={inputContainerClasses}>
           <label htmlFor="name" className="">
             Nombre
           </label>
           <Input
+            ariaLabel="nombre"
             type="text"
             name="name"
-            placeHolder="Enter your name"
+            placeHolder="Ingresa tu nombre"
             register={register}
             registerOptions={{
               required: true,
@@ -87,9 +89,10 @@ const RegisterForm = ({ onSubmit }: SubmitRegisterForm) => {
             Email
           </label>
           <Input
+            ariaLabel="correo electrónico"
             type="email"
             name="email"
-            placeHolder="Enter your email"
+            placeHolder="Ingresa tu correo electr&oacute;nico"
             register={register}
             registerOptions={{
               required: true,
@@ -104,9 +107,10 @@ const RegisterForm = ({ onSubmit }: SubmitRegisterForm) => {
             Contrase&ntilde;a
           </label>
           <Input
+            ariaLabel="contraseña"
             type="password"
             name="password"
-            placeHolder="Enter your email"
+            placeHolder="Ingresa tu contrase&ntilde;a"
             register={register}
             registerOptions={{
               required: true,
@@ -121,9 +125,10 @@ const RegisterForm = ({ onSubmit }: SubmitRegisterForm) => {
             Confirmar contrase&ntilde;a
           </label>
           <Input
+            ariaLabel="confirmar contraseña"
             type="password"
             name="confirmPassword"
-            placeHolder="Confirm your password"
+            placeHolder="Confirma tu contrase&ntilde;a"
             register={register}
             registerOptions={{
               required: true,
@@ -136,15 +141,9 @@ const RegisterForm = ({ onSubmit }: SubmitRegisterForm) => {
           />
         </div>
         <div className="flex flex-col gap-12">
-          <Button type="submit" disabled={Object.keys(errors).length > 0}>
+          <Button ariaLabel="registrar" type="submit" disabled={Object.keys(errors).length > 0}>
             Registrar
           </Button>
-          {/* <Button
-            classes="bg-transparent outline-2 outline-offset-2 outline-solid outline-[#0099c7] !text-[#0099c7] hover:!bg-[#f4f4f4] "
-            label="Ver listado"
-            onClick={onShowUserList}
-            // disabled={Object.keys(errors).length > 0}
-          /> */}
         </div>
       </form>
     </div>

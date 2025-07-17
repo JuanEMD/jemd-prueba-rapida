@@ -1,7 +1,7 @@
 import useToast from "./hooks/useToast";
+import type { RegisterFormProps } from "./libs/interfaces";
 import "./styles/App.css";
 import RegisterForm from "./features/RegisterForm";
-import type { RegisterFormProps } from "./libs/interfaces";
 import CustomUserDataToast from "./components/Toast/CustomUserDataToast.tsx";
 
 function App() {
@@ -14,9 +14,9 @@ function App() {
       data: {
         userData: data,
       },
-      // autoClose: false,
       closeOnClick: false,
-      position: "top-center",
+      position: "top-left",
+      className: '!max-w-[500px] !w-full',
     });
   };
 
