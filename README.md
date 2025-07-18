@@ -40,7 +40,7 @@ La interfaz es sencilla pero profesional, con un estilo limpio y retroalimentaci
 
 ### Comandos de Instalación
 1. **Clonar el repositorio**:
-   -git clone https://github.com/tu-usuario/jemd-prueba-rapida.git
+   -** git clone https://github.com/tu-usuario/jemd-prueba-rapida.git
    
 2. **Acceder al proyecto clonado e instalar las dependencias necesarias**:
    -cd jemd-prueba-rapida
