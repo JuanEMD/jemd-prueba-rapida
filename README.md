@@ -40,15 +40,15 @@ La interfaz es sencilla pero profesional, con un estilo limpio y retroalimentaci
 
 ### Comandos de Instalación
 1. **Clonar el repositorio**:
-   -** git clone https://github.com/tu-usuario/jemd-prueba-rapida.git
+ - git clone https://github.com/tu-usuario/jemd-prueba-rapida.git
    
 2. **Acceder al proyecto clonado e instalar las dependencias necesarias**:
-   -cd jemd-prueba-rapida
-   -pnpm install
-   -pnpm exec playwright install firefox
+-cd jemd-prueba-rapida
+ - pnpm install
+ - pnpm exec playwright install firefox
 
 3. **Correr la aplicación**:
-   -pnpm run dev
+- pnpm run dev
 
 4. **Ejecutar pruebas unitarias**:
-   -pnpm test
+ - pnpm test
