@@ -6,17 +6,19 @@ Este proyecto muestra un formulario de registro de usuarios con validación de d
 
 Cuando se completa correctamente el formulario y se envía, se muestra una notificación de éxito y otra notificación con los datos ingresados por el usuario en formato JSON.
 
-La interfaz es sencilla pero profesional, con un estilo limpio y retroalimentación visual inmediata sobre la validez de los datos ingresados.
+La interfaz es sencilla pero profesional, con un estilo limpio y retroalimentación visual inmediata sobre la validez de los datos ingresados, con el objetivo de cumplir con los requerimientos solicitados de manera satisfactoria sin sobrecargas innecesarias.
 
 ## Detalles Técnicos
 
 ### Tecnologías Principales
 
-- **React**: En esta ocación, elegí React por encima de Next porque el proyecto era sumamente sencillo y ligero y no se aprovecharían todas las características que provee Next.
+- **React**: En esta ocación, elegí React por encima de Next porque el proyecto era sumamente sencillo, ligero y no de todas formas no se aprovecharían todas las características que provee Next, lo que agregaría un peso extra innecesario.
   
 - **TypeScript**: Incluí TypeScript para garantizar un código más robusto, limpio y prevenir errores de tipado.
   
-- **Vite**: Utilicé este compilador por recomendación de Meta, los cuales ahora incluyen por defecto vite como compilador, además de su rápida velocidad de compilación.
+- **Vite**: Utilicé este compilador por recomendación de Meta, los cuales ahora incluyen por defecto vite como compilador en los proyectos de React, además de su rápida velocidad de compilación.
+
+- **pnpm**: Utilicé este manejador de paquetes por recomendación, además de que provee el doble de eficiencia que otros manejadores.
 
 ### Librerías Utilizadas
 
