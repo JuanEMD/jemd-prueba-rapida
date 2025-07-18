@@ -43,7 +43,7 @@ La interfaz es sencilla pero profesional, con un estilo limpio y retroalimentaci
  - git clone https://github.com/tu-usuario/jemd-prueba-rapida.git
    
 2. **Acceder al proyecto clonado e instalar las dependencias necesarias**:
--cd jemd-prueba-rapida
+ - cd jemd-prueba-rapida
  - pnpm install
  - pnpm exec playwright install firefox
 
