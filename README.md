@@ -18,7 +18,7 @@ La interfaz es sencilla pero profesional, con un estilo limpio y retroalimentaci
   
 - **Vite**: Utilicé este compilador por recomendación de Meta, los cuales ahora incluyen por defecto vite como compilador en los proyectos de React, además de su rápida velocidad de compilación.
 
-- **pnpm**: Utilicé este manejador de paquetes por recomendación, además de que provee el doble de eficiencia que otros manejadores.
+- **pnpm**: Utilicé este manejador de paquetes por recomendación, porque posee el doble de eficiencia en velocidad y un manejo de espacio en el disco más óptimo que otros manejadores.
 
 ### Librerías Utilizadas
 
