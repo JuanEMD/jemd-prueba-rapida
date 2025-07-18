@@ -8,7 +8,7 @@ function App() {
   const { success, custom } = useToast();
 
   const onSubmit = async (data: RegisterFormProps) => {
-    success("Registration successful!");
+    success("Registro exitoso");
 
     custom(<CustomUserDataToast data={{ userData: data }} />, {
       data: {
